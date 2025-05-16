@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const links = (
@@ -42,14 +43,14 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Product Store</a>
+        <Link className="btn btn-ghost text-xl" to={"/"}>Product Store</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
-        <a className="btn">Button</a>
+        <Link className="btn" to={"/create"}>Create</Link>
+        <a className="btn">Theme</a>
       </div>
     </div>
   );

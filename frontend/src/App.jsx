@@ -1,14 +1,19 @@
-import './App.css'
-import Navbar from './Components/Navbar'
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Navbar from "./Components/Navbar";
+import CreatePage from "./Pages/createPage";
+import HomePage from "./Pages/homePage";
 
-function App() {
-
-
+const App = () => {
   return (
-    <div>
-      <Navbar></Navbar>
-   </div>
-  )
-}
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/create" element={<CreatePage></CreatePage>}/>
+        <Route path="/" element={<HomePage></HomePage>}/>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
